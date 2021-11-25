@@ -16,4 +16,12 @@ function app(a, b){
     return result;
 }
 
-module.exports = app;
+function calculate(arr) {
+    let score = 0;
+    for(let i = 0; i < arr.length; i++) {
+        score += arr[i];
+    }
+    return score;
+}
+
+module.exports = {app, calculate};
