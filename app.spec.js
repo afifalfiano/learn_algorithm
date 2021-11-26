@@ -1,6 +1,6 @@
 
 
-const app = require('./app.js');
+const {app} = require('./app.js');
 describe('Test Case', () => {
    it('...', () => {
 
