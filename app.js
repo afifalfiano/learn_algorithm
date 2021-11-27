@@ -37,4 +37,29 @@ function miniMaxSum(arr) {
 
 }
 
-module.exports = {staircase, miniMaxSum};
+function designerPdfViewer(h, word) {
+    // Write your code here
+    const words = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    let calculate = 0;
+    const data = word.split("");
+    let dataConvert = [];
+    console.log(data, 'data');
+    for(let j = 0; j < data.length; j++) {
+        for(let k = 0; k < words.length; k++) {
+            if (data[j] === words[k]) {
+                dataConvert.push(h[k]);
+            }
+        }
+    }
+    let max = dataConvert[0];
+    for(let i = 0; i < dataConvert.length; i++) {
+        if (dataConvert[i] > max) {
+            max = dataConvert[i];
+        }
+    }
+    calculate = max * dataConvert.length;
+    return calculate;
+
+}
+
+module.exports = {staircase, miniMaxSum, designerPdfViewer};
