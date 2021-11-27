@@ -1,3 +1,3 @@
 
 #### Link Study Case
-(url)[url]
+(https://www.hackerrank.com/challenges/staircase/problem?isFullScreen=true)[https://www.hackerrank.com/challenges/staircase/problem?isFullScreen=true]
