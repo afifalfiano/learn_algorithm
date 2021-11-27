@@ -15,27 +15,25 @@ function staircase(n) {
 }
 
 function miniMaxSum(arr) {
-    let minimum = arr[0];
-    let maximum = arr[0];
-    let calculateMin = 0;
-    let calculateMax = 0;
+    let calculate = 0;
+    let dataResult = [];
     for(let i = 0; i< arr.length; i++) {
-        if (arr[i] >= maximum) {
-            maximum = arr[i];
-        } else if (arr[i] <= minimum) {
-            console.log(arr[i]);
-            minimum = arr[i];
-        }
+        calculate += arr[i];
     }
     for(let j = 0; j< arr.length; j++) {
-        if (arr[j] !== maximum) {
-            calculateMax += arr[j];
-        } 
-        if (arr[j] !== minimum) {
-            calculateMin += arr[j];
+        const data = calculate - arr[j];
+        dataResult.push(data);
+    }
+    let minimum = dataResult[0];
+    let maximum = dataResult[0];
+    for(let k = 0; k < dataResult.length; k++) {
+        if(dataResult[k] > maximum) {
+            maximum = dataResult[k];
+        } else if (dataResult[k] < minimum) {
+            minimum = dataResult[k];
         }
     }
-    return `${calculateMax} ${calculateMin}`;
+    return `${minimum} ${maximum}`;
 
 }
 

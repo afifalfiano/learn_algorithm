@@ -12,6 +12,10 @@ describe('Test Case', () => {
    });
    it('Should return calculate 20, 20 when input [5,5,5,5,5]', () => {
       const data = [5,5,5,5,5];
-      expect(miniMaxSum(data)).toEqual('20,20');
+      expect(miniMaxSum(data)).toEqual('20 20');
+   });
+   it('Should return calculate 20, 20 when input [5,5,5,5,5]', () => {
+      const data = [140638725,436257910,953274816,734065819,362748590];
+      expect(miniMaxSum(data)).toEqual('1673711044 2486347135');
    });
 });
