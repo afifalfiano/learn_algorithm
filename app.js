@@ -29,4 +29,33 @@ function gradingStudents(grades) {
     return roundedGrades;
 }
 
-module.exports = {gradingStudents};
+function diagonalDifference(arr) {
+    // Write your code here
+    let resultTwo = [];
+    let resultOne = [];
+    let j = 0;
+    let k = arr.length;
+    for(let i = 0; i < arr.length; i++) {
+        resultOne.push(arr[i][j]);
+        resultTwo.push(arr[i][k-1]);        
+        j++;
+        k--;
+    }
+    let valueOne = 0;
+    let valueTwo = 0;
+    resultOne.forEach(item => valueOne += item);
+    resultTwo.forEach(item => valueTwo += item);    
+    
+    const result = valueOne - valueTwo;
+    console.log(result);
+    let checkPosNeg = 0;
+    if (result >= 0) {
+       checkPosNeg = result * 1; 
+    } else {
+       checkPosNeg = result * -1; 
+    }
+    return checkPosNeg;
+
+}
+
+module.exports = {gradingStudents, diagonalDifference};
