@@ -1,6 +1,6 @@
 
 
-const {app} = require('./app.js');
+const {joinedLogger, weekdayText} = require('./app.js');
 describe('Test Case', () => {
    it('...', () => {
 
