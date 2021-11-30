@@ -1,6 +1,6 @@
 
 
-const {bonAppetit} = require('./app.js');
+const {bonAppetit, kangaroo} = require('./app.js');
 describe('Test Case', () => {
    it('Should return value when input like this', () => {
       const data = [
@@ -100007,4 +100007,14 @@ describe('Test Case', () => {
      ];
       expect(bonAppetit(data,2814,249990732)).toEqual(4009);
    });
+
+   it('should return NO when input 0 2 5 3', () => {
+      expect(kangaroo(0,2,5,3)).toEqual("NO");
+   })
+   it('should return NO when input 0 3 4 5', () => {
+      expect(kangaroo(23,9867,9814,5861)).toEqual("NO");
+   })
+   it('should return YES when input 0 3 4 2', () => {
+      expect(kangaroo(0,3,4,2)).toEqual("YES");
+   })
 });
