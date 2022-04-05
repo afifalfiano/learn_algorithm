@@ -24,4 +24,20 @@ function plusMinus(data){
     return [resultPositive.toFixed(6), resultNegative.toFixed(6), resultZero.toFixed(6)].join(', ');
 }
 
-module.exports = {app, plusMinus};
+function minMaxSum(arr) {
+    
+    let min = 0;
+    let max = 0;    
+    const minMax = arr.sort((a, b) => a - b);
+    const total = arr.reduce((acc, result) => acc + result);
+    min = total - minMax[0];
+    max = total - minMax[minMax.length - 1];
+    
+    const result = [max, min];
+    console.log(result.join(' '))
+    return result.join(' ');
+    
+
+}
+
+module.exports = {app, plusMinus, minMaxSum};
